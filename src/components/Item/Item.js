@@ -1,5 +1,5 @@
 import React from 'react';
-import { toggleFavorite } from '../../actions/items';
+import { toggleFavorite } from '../../store/actions/items';
 import { connect } from 'react-redux';
 
 const item = (props) => {

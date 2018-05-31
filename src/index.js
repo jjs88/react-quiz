@@ -2,13 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import rootReducers from './reducers';
 import { BrowserRouter } from 'react-router-dom';
-
-const store = createStore(rootReducers, applyMiddleware(thunk));
+import store from './store/store';
 
 const app = (
   <Provider store={store}>

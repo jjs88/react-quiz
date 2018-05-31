@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from '../../components/Item/Item';
-import { getItems } from '../../actions/items';
+import { getItems } from '../../store/actions/items';
 import { connect } from 'react-redux';
 
 class Items extends Component {
