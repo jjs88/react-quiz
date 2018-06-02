@@ -1,4 +1,4 @@
-export const toggleFavorite = (state, id) => {
+export const toggleFavorite = (state, {id}) => {
   const item = state.find(item => item.id === id);
   const pos = state.findIndex(item => item.id === id);
   const val = state[pos].favorite ? false:true;

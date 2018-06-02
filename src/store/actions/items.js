@@ -13,9 +13,9 @@ export const getItems = () => {
   }
 }
 
-export const toggleFavorite = (id) => {
+export const toggleFavorite = (item) => {
   return {
     type: actionTypes.TOGGLE_FAVORITE,
-    payload: id
+    payload: item
   }
 }

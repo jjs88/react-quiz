@@ -15,17 +15,3 @@
   margin: 0;
   position: absolute;
 }
-
-.Item__favorite {
-  bottom: 10px;
-  right: 20px;
-  position: absolute;
-}
-
-.fav {
-  color: pink;
-}
-
-.Item__favorite:hover {
-  cursor: pointer;
-}

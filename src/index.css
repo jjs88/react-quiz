@@ -8,5 +8,6 @@
 @import './components/ItemDetail/ItemDetailBuy/ItemDetailBuy.css';
 @import './components/ItemDetail/ItemDetailDesc/ItemDetailDesc.css';
 @import './components/ItemDetail/ItemDetailHeader/ItemDetailHeader.css';
+@import './components/ui/Favorite/Favorite.css';
 
 

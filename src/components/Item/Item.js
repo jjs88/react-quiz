@@ -2,6 +2,8 @@ import React from 'react';
 import { toggleFavorite } from '../../store/actions/items';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import Favorite from '../ui/Favorite/Favorite';
 
 const item = (props) => {
   const { 
@@ -11,7 +13,18 @@ const item = (props) => {
   } = props.item;
 
   const price = props.item.price ? props.item.price: null; 
-  const classes = favorite ? 'fas fa-heart Item__favorite fav': 'far fa-heart Item__favorite';
+  const classes = favorite ? ['fas fa-heart Fav']: ['far fa-heart'];
+  
+  const favStyles = {
+    bottom: '10px',
+    right: '20px',
+    position: 'absolute'
+  }
+
+  const clickFav = async (id) => {
+    const { data:item } = await axios.post('/item/post', {id});
+    props.toggleFavorite(item);
+  }
 
   return (
       <div className="Item">
@@ -19,7 +32,7 @@ const item = (props) => {
           <img src={imgUrl}/>
         </NavLink>
         <p className="Item__price">{price ? price.amounts.USD: null}</p>
-        <span className={classes} onClick={() => props.toggleFavorite(id)}></span>
+        <Favorite classes={classes} click={clickFav} id={id} styles={favStyles}/>
       </div>
   )
 }
