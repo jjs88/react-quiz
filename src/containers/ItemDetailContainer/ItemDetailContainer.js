@@ -1,38 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import ItemDetailHeader from '../../components/ItemDetail/ItemDetailHeader/ItemDetailHeader';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
-const itemDetailContainer = (props) => {
-  const { id } = props.match.params;
-  const [item] = props.items.filter(item => item.id === id);
-  //fetch from API
-  
+class ItemDetailContainer extends Component {
+  state = {
+    item: null
+  }
 
+  async componentDidMount() {
+    const { id } = this.props.match.params;
+    //fetch from API
+    const { data:item } = await axios(`/item/${id}`);
+    axios.post('/item/post', {id});
+    this.setState({item});
+  }
 
+  render() {
+    if(!this.state.item) return null;
+    // //destructure item
+    const {
+      description,
+      creators,
+      title,
+      measurements,
+      image,
+      seller: {
+        company
+      }
+    } = this.state.item;
 
- //destructure item
-  const {
-    description,
-    creators,
-    title,
-    measurements,
-    image,
-    seller: {
-      company
-    }
-  } = item;
-
-  return (
-    <div className="ItemDetailContainer">
-      <ItemDetailHeader company={company}/>
-      <ItemDetail item={item}/>
-    </div>
-  )
+    return (
+      <div className="ItemDetailContainer">
+        <ItemDetailHeader company={company}/>
+        <ItemDetail item={this.state.item}/>
+      </div>
+    )
+  }
 }
+  
 
 function mapStateToProps({items}) {
   return { items };
 }
 
-export default connect(mapStateToProps)(itemDetailContainer);
+export default connect(mapStateToProps)(ItemDetailContainer);
