@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import ItemDetailHeader from '../../components/ItemDetail/ItemDetailHeader/ItemDetailHeader';
-import { connect } from 'react-redux';
 import axios from 'axios';
 
 class ItemDetailContainer extends Component {
@@ -41,8 +40,6 @@ class ItemDetailContainer extends Component {
 }
   
 
-function mapStateToProps({items}) {
-  return { items };
-}
 
-export default connect(mapStateToProps)(ItemDetailContainer);
+
+export default ItemDetailContainer;
