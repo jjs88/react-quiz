@@ -1,5 +1,6 @@
 .ItemDetail {
-  margin: 10px;
+  /* margin: 5px; */
+  padding: 20px 0;
   display: flex;
   justify-content: center;
 }

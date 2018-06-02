@@ -1,5 +1,6 @@
 .ItemDetailBuy {
-  border: 1px solid black;
+  background-color: #ffffff;
+  /* border: 1px solid black; */
   margin-bottom: 10px;
   /* width: 700px; */
 }

@@ -1,11 +1,26 @@
 .ItemDetailHeader {
- border: 1px solid black;
+ background-color: #ffffff;
+ border: 1px solid #ffffff;
  text-align: center;
  position: relative;
 }
 
 .ItemDetailHeader__link {
+  display: flex;
+  align-items: center;
   top: 25px;
   left: 10px;
   position: absolute;
+}
+
+.ItemDetailHeader__link > :first-child {
+  color: #b29600;
+  font-size: 140%;
+  margin-right: 5px;
+}
+
+.ItemDetailHeader__link > :last-child:link,
+.ItemDetailHeader__link > :last-child:visited {
+  color: #b29600;
+  text-decoration: none;
 }

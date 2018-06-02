@@ -2,6 +2,6 @@
   cursor: pointer;
 }
 
-.Fav {
-  color: pink;
+.Favorite, .Fav {
+  color: #b29600;
 }

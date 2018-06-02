@@ -9,5 +9,9 @@
 @import './components/ItemDetail/ItemDetailDesc/ItemDetailDesc.css';
 @import './components/ItemDetail/ItemDetailHeader/ItemDetailHeader.css';
 @import './components/ui/Favorite/Favorite.css';
+@import './components/ui/Button/Button.css';
+@import './components/ui/Spinner/Spinner.css';
 
-
+body {
+  font-family: 'Roboto', sans-serif;
+}

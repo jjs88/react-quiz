@@ -1,9 +1,9 @@
 import React from 'react';
 
 const button = (props) => {
-  const { text, styles } = props;
+  const { text, styles, click, disabled } = props;
   return (
-    <button style={styles}>{text}</button>
+    <button disabled={disabled} className="Button" style={styles} onClick={() => click()}>{text}</button>
   )
 }
 

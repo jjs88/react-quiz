@@ -1,14 +1,15 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
-// import { addFavProp } from './helper';
 
-export const getItems = () => {
+export const getItems = (range) => {
+  let url = '/browse';
+  url+= range ? `?start=${range.start}&limit=${range.limit}`:'';
   return async (dispatch) => {
     const {
       data: {
         items
       }
-    } = await axios('/browse');
+    } = await axios(url);
     dispatch({type: actionTypes.RETRIEVE_ITEMS, payload: items});
   }
 }

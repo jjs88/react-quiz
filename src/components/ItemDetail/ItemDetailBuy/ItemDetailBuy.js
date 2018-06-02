@@ -12,6 +12,8 @@ const ItemDetailBuy = (props) => {
   } = props;
 
   const btnStyles = {
+    color: '#b29600',
+    backgroundColor: '#ffffff',
     width: '100%',
     padding: '10px'
   }
@@ -26,8 +28,8 @@ const ItemDetailBuy = (props) => {
         </div>
     </div>
       <div className="flex-row">
-        <Button text="Purchase" styles={btnStyles}/>
-        <Button text="Make Offer" styles={btnStyles}/>
+        <Button text="Purchase" styles={btnStyles} disabled={true}/>
+        <Button text="Make Offer" styles={btnStyles} disabled={true}/>
       </div>
     </div>
   )
