@@ -1,0 +1,9 @@
+.ItemDetail {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.ItemDetail__wrapper {
+  width: 700px;
+}

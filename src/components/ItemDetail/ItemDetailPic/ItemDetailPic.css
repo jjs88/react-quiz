@@ -1,0 +1,10 @@
+.ItemDetailPic {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  position: relative;
+  width: 250px;
+  height: 300px;
+}

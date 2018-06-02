@@ -1,0 +1,11 @@
+.ItemDetailHeader {
+ border: 1px solid black;
+ text-align: center;
+ position: relative;
+}
+
+.ItemDetailHeader__link {
+  top: 25px;
+  left: 10px;
+  position: absolute;
+}
