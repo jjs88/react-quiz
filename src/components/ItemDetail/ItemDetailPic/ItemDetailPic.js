@@ -17,7 +17,7 @@ const itemDetailPic = (props) => {
     props.toggleFavorite(item);
   }
 
-  const classes = favorite ? ['fas fa-heart Fav']: ['far fa-heart'];
+  const classes = favorite ? ['fas fa-heart']: ['far fa-heart'];
   return (
     <div className="ItemDetailPic">
       <Favorite classes={classes} click={clickFav} id={id} styles={favStyles}/>

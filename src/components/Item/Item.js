@@ -13,7 +13,7 @@ const item = (props) => {
   } = props.item;
 
   const price = props.item.price ? props.item.price: null; 
-  const classes = favorite ? ['fas fa-heart Fav']: ['far fa-heart'];
+  const classes = favorite ? ['fas fa-heart']: ['far fa-heart'];
   
   const favStyles = {
     bottom: '10px',
