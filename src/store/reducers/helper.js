@@ -6,10 +6,12 @@ export const toggleFavorite = (state, {id}) => {
     ...item,
     favorite: val
   }
-  //this works because an array is really an object
-  //override the object at position x
-  //return new array with copy of the state, but modifying position x
-  //properties in the target will get overriden by properties in the source
-  //get the position and modify the value
+  //override the item at position x and return a new object to the redux store
   return Object.assign([...state], {[pos]: modItem});
 }
+
+//SOLUTION for changing immutable values so redux picks up the change
+//https://medium.com/@giltayar/immutably-setting-a-value-in-a-js-array-or-how-an-array-is-also-an-object-55337f4d6702
+// const array = ['a', 'b', 'c', 'd']
+// console.log(Object.assign([...array], {2: 'x'}))
+  // ['a','b','x','d']
