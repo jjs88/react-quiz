@@ -1,9 +1,10 @@
 import React from 'react';
 
 const button = (props) => {
-  const { text, styles, click, disabled } = props;
+  let { text, styles, click, disabled, classes } = props;
+  classes = classes ? ['Button', classes]:['Button'];
   return (
-    <button disabled={disabled} className="Button" style={styles} onClick={() => click()}>{text}</button>
+    <button disabled={disabled} className={classes.join(' ')}style={styles} onClick={() => click()}>{text}</button>
   )
 }
 

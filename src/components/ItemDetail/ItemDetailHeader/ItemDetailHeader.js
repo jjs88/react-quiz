@@ -8,7 +8,7 @@ const itemDetailHeader = (props) => {
       <span className="fas fa-chevron-left"></span>
         <NavLink to="/">Home</NavLink>
       </div>
-      <h2>{props.company}</h2>
+      <h1>{props.company}</h1>
     </div>
   )
 }

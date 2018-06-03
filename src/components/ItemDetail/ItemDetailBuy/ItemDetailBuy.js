@@ -28,8 +28,8 @@ const ItemDetailBuy = (props) => {
         </div>
     </div>
       <div className="flex-row">
-        <Button text="Purchase" styles={btnStyles} disabled={true}/>
-        <Button text="Make Offer" styles={btnStyles} disabled={true}/>
+        <Button text="Purchase" styles={btnStyles} classes={['ItemDetailBuy-Btn']} disabled={true}/>
+        <Button text="Make Offer" styles={btnStyles} disabled={true} classes={['ItemDetailBuy-Btn']}/>
       </div>
     </div>
   )
